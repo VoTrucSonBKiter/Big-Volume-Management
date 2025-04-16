@@ -16,8 +16,8 @@ CREATE INDEX idx_article_title ON wiki_people_views_indexing(article_title);
 
 CREATE INDEX idx_views ON wiki_people_views_indexing(views);
 
-LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 9.1/Uploads/monthly_views_2023_cleaned_v2.csv'
-INTO TABLE wiki_people_views
+LOAD DATA INFILE 'C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\monthly_views_2023_cleaned_v2.csv'
+INTO TABLE wiki_people_views_indexing
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
@@ -43,3 +43,5 @@ SELECT article_title, SUM(views) AS total_views
 FROM wiki_people_views_indexing
 WHERE views > 1000
 GROUP BY article_title;
+
+
