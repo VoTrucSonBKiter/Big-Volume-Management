@@ -1,4 +1,4 @@
-DROP DATABASE wiki_views;
+# DROP DATABASE wiki_views;
 CREATE SCHEMA wiki_views; 
 USE wiki_views;
 
